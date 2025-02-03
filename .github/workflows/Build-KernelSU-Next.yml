@@ -5,33 +5,33 @@ on:
       CPU:
         description: "分支"
         required: true
-        default: 'sm8475'
+        default: 'sm7675'
       FEIL:
         description: "配置文件"
         required: true
-        default: 'oneplus_11r_v'
+        default: 'oneplus_ace_3v_v'
       CPUD:
         description: "处理器代号"
         required: true
-        default: 'waipio'
+        default: 'pineapple'
       ANDROID_VERSION:
         description: "内核安卓版本"
         required: true
-        default: 'android12'
+        default: 'android14'
       KERNEL_VERSION:
         description: "内核版本"
         required: true
-        default: '5.10'
+        default: '6.1'
       KSUNEXT_ENABLED:
         description: "添加 KSU Next"
         required: true
         type: boolean
-        default: true
+        default: false
       SUSFS_ENABLED:
         description: "添加 SUSFS"
         required: true
         type: boolean
-        default: true
+        default: false
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -50,7 +50,7 @@ jobs:
       - name: Configure Git
         run: |
          git config --global user.name "build"
-         git config --global user.email "lightjunction@gmail.com"
+         git config --global user.email "3436378798@qq.com"
 
       - name: Install dependencies
         run: |
